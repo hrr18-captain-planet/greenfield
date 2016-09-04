@@ -1,4 +1,4 @@
-var app = angular.module('captainPlanet', []);
+var app = angular.module('nList', []);
 
 app.controller('mainCont',function($scope) {
 
