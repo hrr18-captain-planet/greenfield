@@ -7,7 +7,7 @@ app.controller('mainCont',function($scope) {
   {title: 'Angular', upvotes: 5},
   {title: 'Express stuff', upvotes: 2},
   {title: 'Summary Assessment Solution', upvotes: 15},
-  {title: 'SQL and Mongodb', upvotes: 9},
+  {title: 'SQL and Mongodb and Oost', upvotes: 9},
   {title: 'BackBone...Not', upvotes: 4}
   ];
   //================================================================
