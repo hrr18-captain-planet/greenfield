@@ -22,10 +22,10 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- ANGULAR FILES -->
-  <script type="text/javascript" src="lib/angular/angular.js"></script>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
-  <script type="text/javascript" src="lib/ng-file-upload/ng-file-upload.min.js"></script>
-  <script type="text/javascript" src="lib/ng-file-upload/ng-file-upload-shim.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.20/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.9/ng-file-upload.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.9/ng-file-upload-shim.min.js"></script>
 
   <!-- COMPONENT FILES -->
   <script src="components/links/linksCtrl.js"></script>
@@ -33,7 +33,7 @@
   <script src="components/profile/profileCtrl.js"></script>
   <script src="components/main/mainCtrl.js"></script>
   <script src="components/home/homectrl.js"></script>
-  <script src="components/about/about.js"></script>
+  <script src="components/about/aboutCtrl.js"></script>
   <script src="router/routes.js"></script>
 
 </head>
@@ -42,8 +42,8 @@
   <header class="appHeader">
 
     <ul ng-controller="MainController" class="appHeaderNav">
-      <li class="logo"><a ui-sref='home'><img class="topbar_logo" src="/style/images/logo_500.png"></a></li>
-      <li ng-if="headerUser" class="rezzy_button"><a ui-sref='links'>Add a rezzy</a></li> <!-- have to be logged in to view -->
+      <li class="logo"><a ui-sref='home'><img class="topbar_logo" src="/style/images/new-logo-rectangular.png"></a></li>
+      <li ng-if="headerUser" class="rezzy_button"><a ui-sref='links'>Add a resource</a></li> <!-- have to be logged in to view -->
       <li ng-if="!headerUser" class="entryButtons">
         <a href='/login'>Login</a>
         <a href='/signup'>Sign Up</a>
@@ -67,11 +67,6 @@
   <footer>
     <ul>
         <li class="about_footer"><a ui-sref="about">About</a></li>
-        <li class="blog_footer"><a href="/blog">Blog</a></li>
-        <li class="press_footer"><a href="/press">Press</a></li>
-        <li class="careers_footer"><a href="/careers">Careers</a></li>
-        <li class="contact_footer"><a href="/contact">Contact</a></li>
-        <li class="terms_footer"><a href="/terms">Terms &amp; Privacy</a></li>
         <li class="copyright">&copy; NList 2016</li>
     </ul>
   </footer>

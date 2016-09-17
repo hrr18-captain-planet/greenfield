@@ -1,25 +1,31 @@
+'use strict';
+
 const mysql = require('mysql');
+let auth;
+let dbCon;
 
-// const dbCon = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: '',
-//   database: 'NList'
-// });
+if(process.env && process.env.PW){
+  auth = {
+    password: process.env.PW
+  };
+} else {
+  auth = require('./pw.js');
+}
 
-const dbCon = mysql.createConnection({
-  host: 'nlist.cvtsvwvdzejt.us-west-1.rds.amazonaws.com',
-  user: 'Neekon',
-  password: 'NList11.0',
+dbCon = mysql.createConnection({
+  host: 'nlist.cfajvtv3d5ui.us-west-2.rds.amazonaws.com',
+  user: 'root',
+  password: auth.password,
   database: 'NList',
   port: 3306
 });
 
 dbCon.connect(function(err) {
   if (err) {
-    console.log('error did not connect to rezzy CHECK YO self')
+    console.error(err);
+    throw new Error('Connection to NList database failed');
   }
-  console.log('Connected to NList database BIG THIngs are COMING');
+  console.log('Connected to NList database BIG Things are COMING');
 });
 
 module.exports = dbCon;
