@@ -1,19 +1,19 @@
 const mysql = require('mysql');
 
-// const dbCon = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: '',
-//   database: 'NList'
-// });
-
 const dbCon = mysql.createConnection({
-  host: 'captainplanet.cobzgjzgq1bm.us-west-2.rds.amazonaws.com',
-  user: 'captainplanet',
-  password: 'captainplanet',
-  database: 'NList',
-  port: 3306
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'NList'
 });
+
+// const dbCon = mysql.createConnection({
+//   host: 'captainplanet.cobzgjzgq1bm.us-west-2.rds.amazonaws.com',
+//   user: 'captainplanet',
+//   password: 'captainplanet',
+//   database: 'NList',
+//   port: 3306
+// });
 
 dbCon.connect(function(err) {
   if (err) {
