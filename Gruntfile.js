@@ -12,5 +12,6 @@ module.exports = function(grunt) {
   });
   //plugins must be loaded following this pattern
   grunt.loadNpmTasks('grunt-contrib-jshint');
-
+  grunt.registerTask('default', 'jshint');
+  grunt.registerTask('travis', 'jshint');
 };
